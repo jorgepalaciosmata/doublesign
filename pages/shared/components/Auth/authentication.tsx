@@ -7,7 +7,6 @@ import { ApiService } from "../../services/apiService";
 import { AxiosError } from "axios";
 import Constants from "../../constants";
 import { style } from "./style";
-import { clientSecret } from "../../../../key.secret";
 import { Onboarding } from "../Onboarding/onboarding";
 
 WebBrowser.maybeCompleteAuthSession();
@@ -18,9 +17,6 @@ const Authentication = () => {
     const [accessToken, setAccessToken] = useState<string>("");
 
     const getClientSecret = () => {
-        if (document.URL.indexOf("localhost") != -1) {
-            return clientSecret;
-        }
         return "";
     };
 
