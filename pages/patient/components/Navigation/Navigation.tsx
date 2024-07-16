@@ -17,7 +17,7 @@ export default function Navigation() {
       primary: DefaultTheme.colors.primary,
       text: '#4287f5',
       notification: DefaultTheme.colors.notification,
-      background: "white"
+      background: "#ccc"
     },
   };
 
@@ -27,7 +27,7 @@ export default function Navigation() {
   };
     
   return (
-    <NavigationContainer theme={PatientTheme}>
+    <NavigationContainer>
       <Drawer.Navigator 
           drawerContent={(props) => 
             <NavigationActions drawerProps={props} showShareLink={true} />}

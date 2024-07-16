@@ -1,7 +1,7 @@
 
 const GoogleAuth = {
     responseType: 'id_token',
-    webClientId: '109720273058-ailnd6jvmnst2ihfei9dqjbe9j4t4gih.apps.googleusercontent.com'
+    webClientId: '565697451688-5ubt0tjtfmh7ervnmo5ish7rs4v12q4u.apps.googleusercontent.com'
 }
 
 const Api = {

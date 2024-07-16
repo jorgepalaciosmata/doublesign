@@ -3,14 +3,12 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    paddingHorizontal: 20, 
-    width: "95%", 
-    maxWidth: 400, 
-    marginTop: 20, 
-    marginBottom: 30, 
     borderRadius: 8,
     alignSelf: "center",
+    width: "100%",
+    border: "1px solid black",
+    minHeight: 1000,
+    color: "white",
   },
   Textinput: {
     borderWidth: 1.5,
@@ -22,7 +20,7 @@ const styles = StyleSheet.create({
     color: "#1E436F",
     borderColor:"#73859A",
     paddingLeft: 11,
-    placeholderTextColor:"gray"
+    placeholderTextColor: "gray"
   },
   SubtitleText: {
     fontSize: 15,

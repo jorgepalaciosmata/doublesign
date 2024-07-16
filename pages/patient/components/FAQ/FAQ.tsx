@@ -6,19 +6,9 @@ export default function FAQ() {
         <View>
             <View style={styles.mainContainer}>
                 <View style={styles.paragraph}>
-                    <Text style={styles.title}>Cómo cerrar mi cuenta?</Text>
+                    <Text style={styles.title}>About DoubleSign</Text>
                     <Text style={styles.answer}>
-                        Para cerrar tu cuenta envía un correo electrónico
-                        a esta dirección cuentas@hcpromedical.awsapps.com.
-                    </Text>
-                </View>
-                
-                <View style={styles.paragraph}>
-                    <Text style={styles.title}>Cómo reportar un error?</Text>
-                    <Text style={styles.answer}>
-                        Si encuentras dificultades técnicas puedes enviar un 
-                        correo electrónico a esta dirección soporte@hcpromedical.awsapps.com
-                        y comenzaremos a resolver el problema.
+                        DoubleSign connects you with compatible friends through astrology, comics, matchmaking and social networking by horoscope.
                     </Text>
                 </View>
             </View>
