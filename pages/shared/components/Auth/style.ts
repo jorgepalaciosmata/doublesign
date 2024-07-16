@@ -14,8 +14,8 @@ export const style = StyleSheet.create({
     height: 150
   },
   welcomeMessage: {
-    width: '100%', 
     maxWidth: 400,
+    width: 350,
     marginTop: 20
   },
   innerContainer: {

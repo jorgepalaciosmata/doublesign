@@ -29,23 +29,53 @@ const chineseCompatibility = [
   [6, 5, 7, 8, 1, 6, 1, 6, 8, 6, 5, 5], // Pig
 ];
 
-// function calculateCompatibility() {
-//   const western1 = document.getElementById('western1').selectedIndex;
-//   const chinese1 = document.getElementById('chinese1').selectedIndex;
-//   const western2 = document.getElementById('western2').selectedIndex;
-//   const chinese2 = document.getElementById('chinese2').selectedIndex;
- 
-//   if (western1 === 0 || chinese1 === 0 || western2 === 0 || chinese2 === 0) {
-//       alert('Please select all signs.');
-//       return;
-//   }
+function calculateCompatibility(dobPrimary: Date, dobSecondary: Date) {
 
-//   const westernScore = westernCompatibility[western1 - 1][western2 - 1];
-//   const chineseScore = chineseCompatibility[chinese1 - 1][chinese2 - 1];
- 
-//   const combinedScore = (0.25 * westernScore) + (0.75 * chineseScore);
-//   document.getElementById('compatibilityScore').textContent = combinedScore.toFixed(2) + '%';
-// }
+  const primary = calculateDoubleSign(dobPrimary);
+  const secondary = calculateDoubleSign(dobSecondary);
+  const primaryWesternIndex = westernIndexMapping[primary?.western as keyof typeof westernIndexMapping]; 
+  const secondaryWesternIndex = westernIndexMapping[secondary?.western as keyof typeof westernIndexMapping];
+  const primaryChineseIndex = chineseIndexMapping[primary?.chinese as keyof typeof chineseIndexMapping];
+  const secondaryChineseIndex = chineseIndexMapping[secondary?.chinese as keyof typeof chineseIndexMapping];
+
+  const westernScore = westernCompatibility[primaryWesternIndex][secondaryWesternIndex];
+  const chineseScore = chineseCompatibility[primaryChineseIndex][secondaryChineseIndex];
+
+  const combinedScore = (0.25 * westernScore) + (0.75 * chineseScore);
+  return combinedScore;
+}
+
+const westernIndexMapping = 
+{
+    "aries": 0,
+    "taurus": 1,
+    "gemini": 2,
+    "cancer": 3,
+    "leo": 4,
+    "virgo": 5,
+    "libra": 6,
+    "scorpio": 7,
+    "sagittarius": 8,
+    "capricorn": 9,
+    "aquarius": 10,
+    "pisces": 11,
+}
+
+const chineseIndexMapping = 
+{
+    "rat": 0,
+    "ox": 1,
+    "tiger": 2,
+    "rabbit": 3,
+    "dragon": 4,
+    "snake": 5,
+    "horse": 6,
+    "goat": 7,
+    "monkey": 8,
+    "rooster": 9,
+    "dog": 10,
+    "pig": 11,
+}
 
 export function calculateDoubleSign(dob: Date) {
   if (!dob) {

@@ -58,7 +58,7 @@ const FormPatient: React.FC = () => {
   return (
     <ImageBackground source={require("../../../../assets/cielo.jpg")} >
       <View style={styles.container}>
-        <View style={{ backgroundColor: "white", width: 400, padding: 50, marginLeft: 50, marginTop: 50 }}>
+        <View style={{ backgroundColor: "white", maxWidth:400, minWidth: 300, padding: 50, marginTop: 50 }}>
           <View>
             <Text style={{textAlign:"right", fontWeight: "bold", fontSize: 18}}>{name}</Text>
           </View>
@@ -71,6 +71,9 @@ const FormPatient: React.FC = () => {
             <span style={{fontWeight:"bold"}}>Chinese Sign:</span> {chinese}</Text>
             <br />
           <Text>{description}</Text>          
+        </View>
+        <View>
+          
         </View>
       </View>
     </ImageBackground>)};
