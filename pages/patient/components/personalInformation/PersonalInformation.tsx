@@ -29,10 +29,10 @@ const LandingPage: React.FC = () => {
         }
     });
 
-    const response = await client.get("/109835145289295317480", {
+    const response = await client.get("/me", {
         params: {
-            personFields: 'birthdays',
-            key: 'AIzaSyDKTfCbX3Itj6m6StUquQIC06cwIMJCvhI'
+            personFields: 'birthdays'
+            // key: 'AIzaSyDKTfCbX3Itj6m6StUquQIC06cwIMJCvhI'
         }
     });
 
